@@ -1,8 +1,37 @@
-.DS_Store
+# LaTeX 중간 파일들
 *.aux
-*.log
-*.toc
-*.out
-*.synctex.gz
 *.bbl
 *.blg
+*.idx
+*.ind
+*.lof
+*.lot
+*.out
+*.toc
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.ist
+*.fls
+*.log
+*.fdb_latexmk
+*.run.xml
+*.bcf
+*.synctex.gz
+*.nav
+*.snm
+*.vrb
+
+# build 디렉토리
+build/
+
+# macOS 시스템 파일
+.DS_Store
+
+# VS Code 설정 파일
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
