@@ -1,0 +1,92 @@
+\documentclass[10pt,aspectratio=169]{beamer}
+
+\usetheme{metropolis}
+\usepackage{appendixnumberbeamer}
+\usepackage{kotex}
+\usepackage{pgfpages}
+
+% Note mode switch:
+% - default: hide notes (for make slide)
+% - define \shownotes to enable note pages (for make_note)
+\newif\ifshownotes
+\ifdefined\shownotes
+  \shownotestrue
+\else
+  \shownotesfalse
+\fi
+
+\ifshownotes
+  \setbeameroption{show notes}
+  \setbeamertemplate{note page}[plain]
+  \pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
+\else
+  \setbeameroption{hide notes}
+\fi
+
+\title{Metropolis Beamer Demo}
+\subtitle{Lecture 01}
+\author{Your Name}
+\institute{Your Organization}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Agenda}
+  \tableofcontents
+  \note{발표의 전체 흐름을 간단히 소개합니다.}
+\end{frame}
+
+\section{Introduction}
+\begin{frame}{Why Beamer + Metropolis?}
+  \begin{itemize}
+    \item Clean and modern style
+    \item Fast PDF workflow
+    \item Easy version control
+  \end{itemize}
+  \note{Metropolis의 장점 3가지를 강조해 주세ㅇㅇㅇ요.}
+\end{frame}
+
+\section{Content}
+\begin{frame}{Key Message}
+  \begin{block}{Takeaway}
+    Keep slides simple and focused.
+  \end{block}
+  \note{핵심 문장을 먼저 말하고 보충 설명을 dddxxㅊㅊㅊxx이어갑니다.}
+\end{frame}
+
+\begin{frame}{Two-column Example}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.5\textwidth}
+      \textbf{Left}
+      \begin{itemize}
+        \item Point A
+        \item Point B
+      \end{itemize}
+    \column{0.5\textwidth}
+      \textbf{Right}
+      \begin{enumerate}
+        \item Step 1ㄴㄴㄴㄴㄴ
+        \item Step 2
+      \end{enumerate}
+  \end{columns}
+  \note{좌/우 비교 구조를 설명할 때 시선 이동을 ㅊㅊㅊ유도합니다.}
+\end{frame}
+
+\section{Summary}
+\begin{frame}{Summary}
+  \begin{itemize}
+    \item Use Metropolis theme
+    \item Build with latexmk via Makefile
+    \item Speaker notes via \texttt{make\_note}
+  \end{itemize}
+  \note{마지막에 빌드 명령을 다시 한 번 안내합니다.}
+\end{frame}
+
+\begin{frame}[standout]
+  Thank you!
+  \note{질의응답으로 자연스럽게 전환합니다.}
+\end{frame}
+
+\end{document}
